@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: black;  
+    overflow-x: hidden;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+@layer components {
+  .tweet-btn {
+    border-radius: 2rem;
+    font-weight: 700;
+    background-color: rgb(29, 155, 240);
+    transition: 0.5s;
+  }
+  .tweet-btn:hover {
+    background-color: rgb(29, 155, 240, 0.9);
+  }
+  .sidebar-link {
+    @apply hover:bg-[rgba(255,255,255,0.1)] rounded-[2rem] w-max cursor-pointer p-3 transition duration-500;
+  }
+  .icons-hover {
+    @apply hover:bg-color-hover w-max p-[10px] rounded-[50%] transition duration-500;
+  }
+  .image-input {
+    @apply hover:opacity-80 transition duration-500;
+  }
+  .image-close-button {
+    @apply hover:scale-[110%] transition duration-500 rounded-[50%] absolute bg-transparent;
+  }
+  .auth-buttons {
+    border-radius: 2rem;
+    font-weight: 700;
+    background-color: white;
+    transition: 0.5s;
+    padding: 0.5rem 4rem;
+    border:1px solid rgba(60,64,67,0.15);
+    color: black;
+    display: flex;
+    align-items: center;
+    transition: 0.5s all;
+  }
+  .auth-buttons:hover{
+    background-color: rgba(60,64,67,0.15);
+  }
+}
+
+@layer utilities {
+  .bg-color-hover {
+    background-color: rgba(29, 155, 240, 0.1);
+  }
+}
